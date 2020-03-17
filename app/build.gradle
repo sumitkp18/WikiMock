@@ -1,0 +1,51 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+apply plugin: 'kotlin-kapt'
+
+apply plugin: 'realm-android'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+    defaultConfig {
+        applicationId "com.enguru.wikiMock"
+        minSdkVersion 23
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    dataBinding {
+        enabled = true
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    api LibDeps.koin
+    api AppDeps.koinViewModel
+    api LibDeps.httpLogging
+    api LibDeps.retrofit
+    api LibDeps.gson
+    api LibDeps.gsonConverter
+    api LibDeps.rxJavaAdapter
+    api LibDeps.reactiveNetwork
+    api AppDeps.appCompat
+    api AppDeps.materialComponents
+    api AppDeps.constraintLayout
+    api AppDeps.recyclerView
+    api AppDeps.shimmerAnimation
+    api AppDeps.picasso
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+}

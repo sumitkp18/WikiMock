@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Wiki Mock</string>
+    <string name="toolbar_title">Wiki Search Mock</string>
+    <string name="search_title">Search</string>
+    <string name="menu_title">filter</string>
+    <string name="no_network_title">Something went wrong..</string>
+    <string name="no_network_msg">An alien is probably blocking your signal.</string>
+    <string name="retry_btn">RETRY</string>
+    <string name="sort_by_name">Sort by name</string>
+    <string name="sort_by_stars">Sort by stars</string>
+    <string name="empty_screen_tag">Search the wikipedia by clicking the search button at the top right corner</string>
+    <string name="redirect_restriction_msg">Redirects not allowed</string>
+</resources>
